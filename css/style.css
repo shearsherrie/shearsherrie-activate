@@ -1,0 +1,430 @@
+@charset "utf-8";
+
+/*------------------------------------------------------
+
+Theme Name: Activate - Version 1.0
+Type: Core
+
+CSS overview: 
+
+	1. Resets
+	2. Backgorund
+	3. Main Elements
+		i.global wrapper
+		ii.tile block
+		iii. main content
+	4. Theme elements
+		i. media content
+		ii. blog
+		iii. forms
+		iv. pagination
+		v. gallery
+	5. Footer
+	6. Links
+	7. Typography
+	8. Elements
+		i. buttons
+		ii. columns
+		iii.lists
+		iv. comment lists
+		v.blockquotes
+	9. Widgets
+   10. Miscellaneous
+		
+		
+
+---------------------------------------------------------*/
+
+
+/*--------------------------------------------------------
+	1.RESETS
+--------------------------------------------------------*/
+
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	b, u, i, center,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, embed, 
+	figure, figcaption, footer, header, hgroup, 
+	menu, nav, output, ruby, section, summary,
+	time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+	/* HTML5 display-role reset for older browsers */
+	article, aside, details, figcaption, figure, 
+	footer, header, hgroup, menu, nav, section {
+		display: block;
+	}
+	body {
+		line-height: 1;
+	}
+	ol, ul {
+		list-style: none;
+	}
+	blockquote, q {
+		quotes: none;
+	}
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+		content: '';
+		content: none;
+	}
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+	
+	iframe {border: none;}
+	
+	.wp-caption {margin-bottom: 1.5em; text-align: center;padding: 0px;}
+	.wp-caption img {border: 0 none;padding: 0;margin: 0;}
+	.wp-caption p.wp-caption-text {line-height: 1.5em;font-size: 10px;margin: 0;}
+	.sticky {}
+	.bypostauthor {}
+	.wp-smiley {margin: 0 !important; max-height: 1em;}
+	.aligncenter, img.aligncenter {margin:1.5em auto; display: block; clear: both;}
+
+/*--------------------------------------------------------
+	2.BACKGROUND
+--------------------------------------------------------*/
+
+	html {padding:0; margin:0; height:100%;}
+	body {height:100%;  padding:0; margin:0; border:0; overflow-x:hidden;}
+
+	#noscript {position:absolute; top:20%; left:50%; z-index:10; width:600px; height:130px; margin:-65px 0 0 -300px; text-align: center;  }
+	#noscript h1 {text-align: center;}
+	
+/*--------------------------------------------------------
+	3.MAIN ELEMENTS
+--------------------------------------------------------*/
+
+	/*----------------------------
+	i. nav wrapper
+	-----------------------------*/
+	
+	#navWrapper{width:230px; height:100%; top:0; left:0; padding:0 0 0 30px; position:fixed; overflow: hidden; display:block; z-index:60;    }
+	#header {width:200px; height:70px; text-align:center; position:relative;}
+	#logo { width:200px; }
+	#logo a{ padding:0 !important;}
+	#ajaxloader {margin-bottom:10px; width:200px; height:10px; text-indent:-999em;z-index:50;}
+	
+	/*Music Player*/
+	
+	#musicPlayer {position: absolute; bottom: 0;  width:200px; height:40px; }
+	/*check jplayer/skin.css for music player styles*/
+	
+	
+	/*----------------------------
+	ii. tile block
+	-----------------------------*/
+	
+	#tileBlock {overflow:hidden; display:block; width:230px; height:auto; position:absolute; top:70px; bottom:50px;}
+	#tileBlock.noMusic {bottom:0;}
+	#tileBlock #innerTiles{width:auto; height:auto; overflow:hidden; float:left; position:relative;}
+	
+	/* Tiles */
+	.tile {width:230px; height:200px; overflow: hidden; padding-bottom: 10px;}
+	.tile img {width:194px; height:194px;  padding:0;}
+	.tile a {padding:0; text-decoration: none;}
+	
+	.tile .tileImage {display:block; width:194px; position:relative; }
+	.tile .tileImage .tileColor {position:absolute; top:0; z-index:11; }
+	.tile .tileImage .tileBW {z-index:10; }
+	.tile .tileImage span {position:absolute; display:block; bottom:0; right:0; z-index:12; padding:5px 10px;}
+	
+	.tile .tileHighlight {height:194px; width:5px; margin:3px 0; position:absolute; right:0px; display:none;}
+	
+	/*tile submenu*/
+	.tile .submenu {width:180px; height:auto; float:right; margin:5px 0 0; position:relative; margin-right:30px;}
+	.tile .submenu li {float:right; width:100%; list-style: none !important; margin:5px 0 5px 5px;}
+	.tile .submenu a {text-align: right; display:block; float:right;  padding:10px; text-decoration:none;}
+	
+
+	
+	/*----------------------------
+	iii. main content 
+	-----------------------------*/
+	
+	/*Main wrapper*/
+	#mainWrapper { width:580px; position:absolute; height:auto; min-height:100%; left:260px; top:0;  display:block; overflow:hidden;}	
+	
+	#mainWrapper #pageHeading {margin:40px 0 40px 30px; height:auto; display:block; text-align: left; }
+	#mainWrapper #content{width:500px; float:left; padding:0 40px 70px; height:100%;}
+	
+	/*side wrapper*/
+	
+	#sideWrapper {position:fixed; left:860px; top:0;  width:auto; height:100%;  overflow: hidden; display:block; z-index:60;}
+	#sideWrapper #featuredImage, #sideWrapper #gMap{position: absolute;top: 0;bottom: 0;left: 0;right: 0;overflow:hidden;}
+	
+	/*side navigation buttons*/	
+	#pageContentButton {position:fixed; margin: -50px 0 0; right: 0; top:50%; padding:0;  display:block; width:30px; height:100px; z-index:100;}
+	#menuContentButton {position:fixed; margin: -50px 0 0; left: 0; top:50%; padding:0; display:block; width:30px; height:100px; z-index:100;}
+	
+	/*large menu caption*/
+	#largeCaption {position:fixed; right:0px; bottom:40px; display:block; z-index:100;}
+	#largeCaption p{text-align: right;  margin: 0 !important; padding-top:20px; padding-right:20px;}
+		
+	/*blog and search containers*/
+	#blogContainer, #searchContainer {position:relative;}
+
+	/* sidewrapper gallery */
+	#galleryLoader {position:absolute; top:50%; left:50%; margin:-5px 0 0 -50px; width:100px; height:10px; text-indent:-999em; z-index:50;}
+	#gallery { position:relative; overflow: hidden; width:100%; height:100%; display:block; position:relative;}
+	#galleryStage {position: absolute;top: 0;bottom: 160px;left: 0;right: 0;overflow:hidden;}
+	#galleryStage img {margin:0 !important; padding:0 !important; width:100%;}
+	#galleryThumbnails {width:100%; height: 140px; bottom: 10px;position: absolute; left: 0;right: 0; z-index: 2; margin:0 !important; }
+	#galleryThumbnails #innerThumbnails {width:100%; height: 140px; position: relative; overflow:hidden; padding:0 5px; }
+	#galleryThumbnails #innerThumbnails a.activeSlide img{opacity:0.4; filter:alpha(opacity=40);}
+	#galleryThumbnails a, #galleryThumbnails a:hover {background:none; padding:0;}
+	#galleryThumbnails img {height: 140px; margin: 0 5px !important; border: none !important; padding: 0 !important; float: left; cursor: pointer;}
+	#galleryFullscreen {position:absolute; top:0; left:10px; width:12px; height:12px; z-index:61; cursor:pointer; padding:10px 5px 5px;}
+	#galleryTitle {position:absolute; bottom:280px; left:0px; text-align: left; z-index: 61; overflow: hidden; padding:10px 20px;}
+	#galleryDescription {position:absolute; bottom:170px; left:0px; text-align: left; z-index: 61; max-width:500px; padding:10px 20px;}
+	
+	#portfolioCategories {clear: both;display: block; overflow:hidden; float:right; width:200px; }
+	#portfolioCategories li {list-style: none !important; overflow:hidden; display:block; text-align: right; }
+	#portfolioCategories li h4 {margin-bottom:0 !important;}
+	#portfolioCategories li a {float:right; padding: 10px 15px; text-align: right; }
+	
+/*--------------------------------------------------------
+	4.PAGE ELEMENTS
+--------------------------------------------------------*/
+
+	
+	/*--------------------------------------------
+	i. media content - blogs, galleries, general
+	--------------------------------------------*/
+	
+	img, iframe{display:block;}
+	iframe {z-index:100;}
+	#content img {margin-bottom:1.2em; margin-top:1.2em;}
+	.mediaContainer{margin:1.6em 0; padding:5px; position:relative; overflow:hidden;}
+	
+	.mediaContainer a {display:block; position:relative; text-decoration: none; overflow: hidden; height:100%;}
+	.mediaContainer a:hover {text-decoration: none;}
+		
+	.mediaContainer.blog {width:auto; height:auto;}
+	
+	.mediaContainer img {position: relative; top:0; left:0; padding:0 !important; border:0!important; background:none; margin:0 !important;}
+	.mediaContainer.blog img{width:100%; height:auto; }
+		
+	/* set alignment */
+	.mediaContainer.alignLeft{float:left;margin-right:20px;}
+	.mediaContainer.alignRight{float:right;margin-left:20px;}
+
+	/*gallery media*/
+	.mediaContainer.blog{}
+	.mediaContainer.last{margin-right:0px;}
+	
+	._rolloverSocial{position:absolute;border:none;z-index:2; } 
+	
+	
+	/*----------------------------
+	ii. blog
+	-----------------------------*/
+	
+	#singlePost {height: auto; width:100%; overflow:hidden; padding-top:10px; position:relative;}
+	.post, .page{padding-bottom:20px; margin:0 0 1.3em; float:left; width:100%; }
+	.postContent {margin:1.6em 0;}
+	.post.last{margin:0px; padding:0px; border-bottom:none !important;}
+	ul.entryMeta li{list-style:none; margin:0 !important; overflow: hidden;}
+	.entryMeta{float:left; width:130px; margin:0 1.3em 1.3em 0; text-align:left; list-style: none !important; padding:0 !important;}
+	.postClose{width:11px;height:18px;position:absolute;z-index:99;cursor:pointer;top: 0; right:0; text-align: center; display:block;}	
+	
+	/*----------------------------
+	iii. forms
+	-----------------------------*/
+	#contactForm, #commentForm {width:100%; float:left; margin:auto;}
+	#contactForm .form, #commentForm .form {width:100%; }
+	#contactForm .form.left, #commentForm .form.left{ margin-right:0;}
+	.field{width:98%; height:30px;border:none; padding:0 5px;margin:0 0 10px 0; }
+	.field:focus{outline:none;border:none;}
+	.tarea{width:98%; height:101px;border:none;  padding:8px 5px 5px 5px;float:left; text-align:justify; overflow:auto;}
+	.tarea:focus{border:none; outline:none;}
+	.formProgress{clear:both; float:left;margin-top:15px;}
+	 p.form{float:left; overflow:hidden;}
+	 .protected-post-form {width:auto; overflow: hidden;}
+	
+	/*----------------------------
+	iv. pagination
+	-----------------------------*/
+	
+	.container{width:100%; float:left;margin:1.6em 0;padding:0px; overflow:hidden;height:auto;}
+	.page_navigation , .alt_page_navigation{ width: 100%; height:auto; text-align: center;   overflow: hidden; margin:1.6em 0;}
+	.page_navigation a, .alt_page_navigation a{margin:2px; width:10px;height:10px;text-decoration:none; display: inline-block; vertical-align: middle;  }
+	.page_navigation .previous_link, .page_navigation .next_link {display:none;}
+	ul.contentPaginate {margin:0;  }
+	ul.contentPaginate li {list-style:none !important; margin:0 !important; padding:0; overflow: hidden;}
+
+	
+	/*----------------------------
+	v. gallery
+	-----------------------------*/
+	.gallery {margin:auto;}
+	.gallery-item {float:left; margin-top:10px; text-align:center; width:33%;}
+	.gallery-columns-2 .gallery-item {width:50%; }
+	.gallery-columns-4 .gallery-item {width:25%; }
+	.gallery img { border:none;}
+	.gallery .gallery-caption {margin-left:0;}
+	
+/*--------------------------------------------------------
+	5. FOOTER
+--------------------------------------------------------*/
+
+	#footerWrapper { width:500px; position:fixed; left:260px; bottom:0; display:block; overflow:hidden; padding:0 40px; }
+	#footerWrapper #footer {margin:0; padding:0; height:30px; display:block; overflow: hidden;}
+	#footerWrapper #footer #copyright {margin:0; padding:5px 0; float:left;}
+	.iconContainer{ float:right; margin-left:3px; margin-top:7px; }
+	.iconContainer img {margin:0 !important; border:0 !important;}
+
+/*--------------------------------------------------------
+	6. LINKS
+--------------------------------------------------------*/
+
+	a,a:visited{text-decoration:none; outline:none; border:none;}
+	a:hover{text-decoration:underline;}
+
+/*--------------------------------------------------------
+	7. TYPOGRAPHY
+--------------------------------------------------------*/
+	
+	strong {font-weight:bold;}
+	em {font-style: italic;}
+	#mainWrapper p {margin-top:1.3em; margin-bottom:1.3em;}
+	h1,h2, h3, h4, h5, h6, p, ul, ol {margin-top: 1.3em; margin-bottom: 1.3em;  }
+	h1,h2,h3,h4,h5,h6 { text-transform: uppercase; letter-spacing: 1px; line-height: 1.3em; }
+	h1.pageHeading{ font-size:80px; line-height:1em; position:relative;z-index:10;width:100%; margin:40px 0 10px; padding-bottom:30px;  word-wrap: break-word;} 
+	p{font-size: 14px;line-height: 16px;}
+	p.slogan{ width:100%; font-family: "GeosansLightRegular",sans-serif; font-size:12px; margin:5px 0 0;text-transform:uppercase; letter-spacing:3.5px;}
+	pre,code {display:block; font-family:Courier, sans-serif; margin:1.3em 0; padding:10px; width:100%; }
+	
+
+/*--------------------------------------------------------
+	8. ELEMENTS
+--------------------------------------------------------*/
+
+	/*----------------------------
+	i. buttons
+	-----------------------------*/
+	
+	.button {display: inline-block;position: relative;cursor: pointer;border:none; margin:15px 0;}
+	.button:hover{text-decoration:none;}
+	
+	.button.small {padding: 10px 20px;}
+	.button.medium{padding: 12px 25px;}
+	.button.large {padding: 15px 30px;}
+	
+	.button.alignRight {float:right;}
+	.button.alignLeft {float:left;}
+		
+	/*----------------------------
+	ii. columns
+	-----------------------------*/
+	
+	.one_half, .one_third, .one_fourth,.one_fifth, .two_third, .three_fourth{height:auto; float:left;margin-right:8%;overflow:hidden;}
+	.one_half{width:46%;}
+	.one_third{width:28%;}
+	.one_fourth{width:19%;}
+	.one_fifth{width:19%;}
+	.two_third{width:64%;}
+	.three_fourth{width:73%;}
+	.col_last{margin-right: 0 !important; clear: right;}
+	
+	/*----------------------------
+	iii. lists
+	-----------------------------*/	
+	
+	#mainWrapper ul li, #mainWrapper ol li, #widgetWrapper ul li, #widgetWrapper ol li{margin-bottom: 1.0em;padding-bottom: 2px;margin-left: 25px; list-style: square;}
+	#mainWrapper ol li{ list-style: decimal;}
+	
+		
+	/*----------------------------
+	iv. comment list
+	-----------------------------*/	
+	
+	ul.commentList{width:100%; list-style:none; overflow: hidden; margin:0;}
+	
+	ul.commentList li{width:100%;margin:1.3em 0; margin-left:0 !important; padding:0 0 20px 0;float:left;list-style:none !important;}
+	ul.commentList li div.avatar {float:left; margin-right:25px; }
+	ul.commentList li .avatar img {margin-top:0 !important;}
+	.commentName,.commentDate,.commentary p{margin:0 0 1.3em;}
+	ul.commentList li .mediaContainer{margin-bottom:0px;}
+	
+		
+	
+	/*----------------------------
+	v. blockquotes
+	-----------------------------*/
+
+	blockquote{margin:1.6em 0; clear: both;display: block; overflow:hidden;}
+		
+	blockquote p {float:left;margin:0 0 1.3em 45px !important;padding-top:3px;}
+	blockquote p.clientRef {margin:0px 0 0 45px;}
+	blockquote.alignLeft{width:200px; float:left; margin:10px 15px 15px 0 ;}
+	blockquote.alignRight{width:200px; float:right ;margin:10px 0 15px 15px;}
+	
+	
+
+/*--------------------------------------------------------
+	9. WIDGETS
+--------------------------------------------------------*/
+
+
+	/*Twitter*/
+	.twitter, .query { margin:1.6em 0; }
+	.tweet_list {list-style: none;margin: 0;padding: 0;overflow-y: hidden;}
+	.tweet_list .awesome, .tweet_list .epic {text-transform: uppercase;}
+	.tweet_list li {overflow-y: auto;overflow-x: hidden;padding: 1.3em 0;list-style-type: none;margin:0 !important;vertical-align: middle;}
+	.tweet_list li a {}
+	.tweet_list li a img {margin:0 !important;}
+	.tweet_list .tweet_even {}
+	.tweet_list .tweet_avatar {padding-right: 10px; float: left;}
+	.tweet_list .tweet_avatar img {vertical-align: middle;}
+	.tweet_list .tweet_time {}
+	.tweet_list .tweet_join {}
+	.tweet_list .tweet_text {font-size:14px; line-height:18px;}
+	.tweet_list .tweet_text a {font-size: 14px;}
+	.tweet_list .tweet_last {border:0;}
+	
+	/*jPlayer*/
+	
+	div.jp-audio {font-size: 1em; line-height: 1.6; }
+	
+	div.jp-audio {width: 200px;}
+	
+	div.jp-interface {position: relative; width: 100%;  }
+	div.jp-audio div.jp-type-playlist div.jp-interface { height: 30px; }
+	
+	div.jp-interface ul.jp-controls {margin:0;}
+	div.jp-interface ul.jp-controls li {display:inline; float: left; width:50px;}
+	div.jp-interface ul.jp-controls a { display:block;overflow:hidden;text-indent:-9999px;height: 30px;margin: 0; padding: 0; z-index: 1; outline: none;}
+	div.jp-playlist {display:none;}
+
+	div.jp-jplayer { width:0px; height:0px; }
+	
+
+
+/*--------------------------------------------------------
+	10. MISCELLANEOUS
+--------------------------------------------------------*/	
+
+  	.clear{clear:both;}
+  	.clearLeft{clear:left;}
+  	.clearRight{clear:right;}
+  	.hide{display:none !important;}
+  	.show{display:block !important;}
+	.right{float:right !important;}
+	.alignright{float:right !important; margin-left:1.2em;}
+	.left{float:left !important;}
+	.alignleft{float:left !important; margin-right:1.2em;}
+	.noMargin{margin:0 !important;}

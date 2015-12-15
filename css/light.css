@@ -1,0 +1,297 @@
+@charset "utf-8";
+
+/*------------------------------------------------------
+
+Theme Name: Activate - Version 1.0
+Type: Light
+
+CSS overview: 
+
+	1. Background
+	2. Main Elements
+		i. preloader
+		ii. nav wrapper
+		iii. tile block
+		iv. main content
+	3. Page elements
+		i.twitter
+		ii. blog
+		iii. search
+		iv. form elements
+		v. pagination
+		vi. footer
+		vii. links
+	4. Typography
+	5. Elements
+		i.buttons
+		ii. image styling
+		iii. comment lists
+		iv.blockquotes
+	6. Widgets
+	7. Miscellaneous
+		
+
+---------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------
+	1.BACKGROUND
+--------------------------------------------------------*/
+
+	body, #preloader{background: #000 url('../images/light/thatch.png') repeat;}
+
+
+/*--------------------------------------------------------
+	2.MAIN ELEMENTS
+--------------------------------------------------------*/
+		
+	/*----------------------------
+	i. preloader
+	-----------------------------*/
+	#preloader { width:100%; height:100%; position:fixed; top:0; left:0; z-index:1000;}
+	#preloader-img { position:absolute; top:50%; left:50%; z-index:10; width:150px; height:80px; margin:-40px 0 0 -75px; text-indent:-999em; background: url("../images/light/loader.gif") no-repeat bottom center;}
+	#preloader-logo{position:absolute; top:50%; left:50%; width:150px; height:40px; margin:-20px 0 0 -75px; background: url("../images/light/logo-preloader.png")  top center no-repeat;}
+	
+
+	/*----------------------------
+	ii. nav wrapper
+	-----------------------------*/
+	
+	#navWrapper {background: #070707 url("../images/light/noise.png") repeat;   -moz-box-shadow: 5px 0px 5px rgba(0,0,0,0.2); -webkit-box-shadow: 5px 0px 5px rgba(0,0,0,0.2); box-shadow: 5px 0px 5px rgba(0,0,0,0.2);}
+	#header {color:#fff; }
+	#ajaxloader {background: url("../images/light/loader.gif") no-repeat bottom center;}
+	
+	/*Music Player*/
+	
+	#musicPlayer {background:none; }
+	
+	
+	/*----------------------------
+	iii. tile block
+	-----------------------------*/
+	
+	.tile .tileImage {border:3px solid #333; background: #111;}
+	.tile .tileImage span {background:#070707; font-family:"BebasNeueRegular",sans-serif; font-size:24px; color:#fff; }
+	
+	.tile .tileHighlight {background:#ce0707;}
+	
+	/*tile submenu*/
+	.tile .submenu a {background:#fff; color:#000; text-transform: uppercase; font-family: Helvetica, Arial, sans-serif; font-weight:bold;}
+	.tile .submenu a:hover {background:#ce0707;}
+	
+	.highlight {background-color:#ce0707 !important;}
+	
+	
+	/*----------------------------
+	iv. main content 
+	-----------------------------*/
+	
+	/*Main wrapper*/
+	#mainWrapper {font-family: Georgia, Verdana, serif; background:#fff;}
+	#mainWrapper, #mainWrapper p, #mainWrapper ul li {font-size: 13px; line-height: 1.5em;}
+	
+	#mainWrapper #pageHeading {text-transform: uppercase; letter-spacing: -2px; color:#000; font-size:150px; line-height:1em; font-family:"BebasNeueRegular",sans-serif; border-bottom:5px solid #ce0707; }
+	
+	/*side navigation buttons*/	
+	#pageContentButton {background: #000 url('../images/light/expand.png') no-repeat center; }
+	#menuContentButton {background:#000 url('../images/light/back.png') no-repeat center;}
+	
+	/*large menu caption*/
+	#largeCaption p{color:#fff; text-transform: uppercase; letter-spacing: -2px; font-family:"BebasNeueRegular",sans-serif; background:url('../images/light/backgroundOverlay.png') repeat; font-size:inherit; line-height: inherit; text-shadow: 1px 1px 1px #000000; filter: dropshadow(color=#000000, offx=1, offy=1); }
+	
+	
+	/*Side Wrapper*/
+	 #sideWrapper { background: #070707 url("../images/light/noise.png") repeat; -moz-box-shadow: -5px 0px 5px rgba(0,0,0,0.2); -webkit-box-shadow: -5px 0px 5px rgba(0,0,0,0.2); box-shadow: -5px 0px 5px rgba(0,0,0,0.2);}
+	 
+	/* sidewrapper gallery */
+	#galleryLoader {background: url("../images/light/loader.gif") no-repeat bottom center; }
+	#gallery { background: transparent;}
+	#galleryFullscreen {background: #000 url("../images/light/fullscreen.png") no-repeat center center;  }
+	#galleryFullscreen.closeButton {background: #000 url("../images/light/closeButton2.png") no-repeat center center; }
+	#galleryTitle {color:#fff; font-family:"BebasNeueRegular",sans-serif; font-size:40px; background:#000; }
+	#galleryDescription, #galleryDescription a {color:#fff; font-family: Georgia,Verdana,serif; font-size:16px; background:#000; }
+	
+	#portfolioCategories li a {font-size:22px; background:#000;  color:#fff; font-family:"BebasNeueRegular",sans-serif;}
+	  
+   	
+		
+/*--------------------------------------------------------
+	3.PAGE ELEMENTS
+--------------------------------------------------------*/
+		
+		
+	/*----------------------------
+	i. twitter
+	-----------------------------*/
+
+	.twitter, .query {   }
+	.tweet_list .awesome, .tweet_list .epic {text-transform: uppercase;}
+	.tweet_list li {border-bottom:1px solid #ccc;}
+	.tweet_list li a {color: #ce0707;}
+	.tweet_list .tweet_text {font-size:13px; font-style:italic; color:#656565;}
+	.tweet_list .tweet_text a {font-size: 13px;}
+	
+		
+
+	/*----------------------------
+	ii. blog
+	-----------------------------*/
+	
+	ul.entryMeta{font-size:11px; color:#333;}
+	ul.entryMeta li{border-bottom: 1px solid #ccc; padding:2px 0 2px 16px; }
+	ul.entryMeta li, ul.entryMeta a {font-size:11px !important; font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Verdana,Tahoma,sans-serif; }
+	#blogContainer ul li div.post{border-bottom:1px solid #ccc;}
+	.postClose{background: url("../images/light/closeButton.png") no-repeat;}
+	
+	.entryMeta .author {background: url("../images/light/author.png") no-repeat left center;}
+	.entryMeta .category {background: url("../images/light/category.png") no-repeat left center;}
+	.entryMeta .date {background: url("../images/light/date.png") no-repeat left center;}
+	.entryMeta .comments {background: url("../images/light/comment.png") no-repeat left center;}
+	.entryMeta .tags {background: url("../images/light/tag.png") no-repeat left center;}
+	
+	/*----------------------------
+	iii. search
+	-----------------------------*/
+
+	#searchContainer ul li div.post, #searchContainer ul li div.page{border-bottom:1px solid #ccc;}
+	
+	/*----------------------------
+	iv. form elements
+	-----------------------------*/
+	
+	.field{background: #e4e4e4; border:1px solid transparent; font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Verdana,Tahoma,sans-serif; font-size:12px;}
+	.field:focus{border:1px solid transparent; color:#121212;}
+	.tarea{background: #e4e4e4; border:1px solid transparent; font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Verdana,Tahoma,sans-serif; font-size:12px;}
+	.tarea:focus{background: #e4e4e4; border:1px solid transparent; color:#121212;}
+	.formReset{background: #e4e4e4; border:1px solid transparent;}
+	.formVerify{background: #e4e4e4; border:1px solid transparent; color:#121212;}
+
+	
+	/*----------------------------
+	v. pagination
+	-----------------------------*/
+	.page_navigation a, .alt_page_navigation a{background-image:url("../images/light/paginate.png");background-position: 0 0;background-repeat:  no-repeat;}
+	.active_page{background-image:url("../images/light/paginate.png");background-position: 0px -10px !important;background-repeat:  no-repeat !important;text-decoration:none;}
+
+	
+	/*----------------------------
+	vi. footer
+	-----------------------------*/
+	
+	#footerWrapper { background:#fff; font-family: Georgia, Verdana, serif; }
+	#footerWrapper a {font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Verdana,Tahoma,sans-serif;}
+	#footerWrapper #footer {background:#fff; border-top:1px solid #ccc; }
+	#footerWrapper #footer #copyright {font-size:10px; }
+	#footer a {color: #656565; font-size:10px; }
+	
+	/*----------------------------
+	vii. links
+	-----------------------------*/
+
+	a,a:visited{font-size:13px; color:#121212;}
+	a:hover{color:#121212; text-decoration:underline;}
+	a.readMore {float:right;}
+
+
+/*--------------------------------------------------------
+	4.TYPOGRAPHY
+--------------------------------------------------------*/
+
+	h1,h2,h3,h4,h5,h6{color:#121212; font-family: Helvetica, Arial, sans-serif;  }
+	h1{font-size:36px;}
+	h2{font-size:28px;}
+	h3{font-size:22px;}
+	h4{font-size:18px;}
+	h5{font-size:14px;}
+	h6{font-size:12px;}
+	#content, p, blockquote p.clientRef, .field, .tarea {color:#656565;}
+	pre,code {color:#fefefe; background:#c9c9c9;}
+	strong {color:#ce0707;}
+
+/*--------------------------------------------------------
+	5.ELEMENTS
+--------------------------------------------------------*/
+
+	/*----------------------------
+	i. buttons
+	-----------------------------*/
+	
+	.button {background-color: #000; color:#eee !important; font-family: Helvetica, Arial, sans-serif; text-transform:uppercase; font-weight: bold;}
+	.button:hover{background-color:#111;}
+	.button.teal {background-color: #07beec; }
+	.button.teal:hover{background-color:#07a1c7;}
+	.button.navy {background-color: #266291;}
+	.button.navy:hover{background-color:#1d537e;}
+	.button.red {background-color: #ce0707;}
+	.button.red:hover {background-color: #b01414;}
+	.button.magenta {background-color: #ba115b;}
+	.button.magenta:hover {background-color: #a51b58;}
+	.button.orange {background-color: #e78c0b;}
+	.button.orange:hover {background-color: #cf7f0d;}
+	.button.yellow {background-color: #f0ed0b; color:#111 !important;}
+	.button.yellow:hover {background-color: #d1cf10; color:#111 !important;}
+	.button.green {background-color: #7fa607;}
+	.button.green:hover {background-color: #68860b;}
+	.button.black {background-color: #000000;}
+	.button.black:hover {background-color: #1e1e1e;}
+	.button.white {background-color: #f2f2f2; color:#000 !important;}
+	.button.white:hover {background-color: #dedede;color:#000 !important;}
+		
+	.button.small {font-size: 12px !important;}
+	.button.medium{font-size: 13px !important;}
+	.button.large {font-size: 14px !important;}	
+		
+	/*----------------------------
+	ii. image styling
+	-----------------------------*/
+
+	#content img{border: 1px solid #fefefe; background:#c9c9c9; padding:5px;}
+	.mediaContainer{border: 1px solid #ccc; background: #c9c9c9;}
+	
+		
+	/*----------------------------
+	iii. comment lists
+	-----------------------------*/
+		
+	ul.commentList li{border-bottom:1px solid #ccc;}
+	ul.commentList li p{font-size:12px;}
+	.commentDate {font-size:12px;color:#999; font-family: "Times New Roman",Times,serif;font-style: italic;}
+	.commentName {font-size:14px;color:#999;}
+	ul.commentList li.last{border:none;padding:0px;}
+	
+	
+	/*----------------------------
+	iv. blockquotes
+	-----------------------------*/
+	
+	blockquote{background-image: url(../images/light/openQuote.png);background-repeat:no-repeat; font-size: 15px;font-style: italic;}
+	blockquote p {font-size:15px !important; color:#656565 !important;}
+	blockquote p.clientRef {font-size:11px !important; color:#333 !important;}
+		
+
+/*--------------------------------------------------------
+	6. WIDGETS
+--------------------------------------------------------*/
+
+	/*jPlayer*/
+	
+	div.jp-audio {-moz-box-shadow: 0px 0px 10px rgba(170,170,170,0.3); -webkit-box-shadow: 0px 0px 10px rgba(170,170,170,0.3); box-shadow: 0px 0px 10px rgba(170,170,170,0.3);}
+		
+	div.jp-interface {background: #000; }
+	
+	a.jp-previous { background: url("../images/light/skin.png") 0 0 no-repeat; }
+	a.jp-play { background: url("../images/light/skin.png") -50px 0 no-repeat; }
+	a.jp-pause { background: url("../images/light/skin.png") -100px 0 no-repeat; display: none; }	
+	a.jp-next { background: url("../images/light/skin.png") -150px 0 no-repeat; }
+	a.jp-stop { background: url("../images/light/skin.png") -200px 0 no-repeat; }	
+	
+
+	ul.jp-controls li a:hover {background-color:#ce0707;}
+	
+	div.jp-jplayer { background-color: #000000; }
+
+/*--------------------------------------------------------
+	7. MISCELLANEOUS
+--------------------------------------------------------*/
+	

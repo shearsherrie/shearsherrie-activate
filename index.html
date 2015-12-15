@@ -1,1 +1,240 @@
-Hello World
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" dir="ltr" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" dir="ltr" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" dir="ltr" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html dir="ltr" lang="en-US">
+<!--<![endif]-->
+<head>
+<link rel="icon" href="images/wpmini-grey.png" type="image/x-icon">
+<link rel="shortcut icon" href="images/wpmini-grey.png" type="image/x-icon">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=no"/>
+<title>Shear Sherrie</title>
+<script type="text/javascript">
+//THEME SETUP//////////////////////////////////////////////////////////////
+/*init-------------------------------------------------------------------*/
+var homePageURL = "http://www.shearsherrie.com";
+var firstPaginate = true;
+var showLargeCaption = 1;
+var tileHeight = 200;
+var tileWidth = 200;
+var isSlideshow = 1;
+var isMusic = 1;
+var musicAutoplay = 1;
+var musicArray = [{ mp3 :"music/SoundProdigy-Lets-have-fun.mp3", oga: "music/SoundProdigy-Lets-have-fun.ogg"}];
+/*twitter details--------------------------------------------------------*/
+var twitterAccount = "iamspacehead"; 
+var numTweets = "5"; 
+/*toggle/fade speeds-----------------------------------------------------*/
+var pageTransitionSpeed = 400; 
+/*Contact form ----------------------------------------------------*/
+var formError = "There was an error sending your email. Please try again.";
+var formWarning = "Verify fields and try again!";
+var formSuccess = "Thanks, we got your email and will respond as soon as possible.";
+var formReload = "Send any enquiry you may have using the form below.";
+var gmapLat = "-90.202591";
+var gmapLong = "38.633098";
+//END SETUP//////////////////////////////////////////////////////////////////
+</script>
+<link rel='stylesheet' id='geosans-css' href='fonts/bebasneue/stylesheet.css' type='text/css' media='all'/>
+<link rel='stylesheet' id='base-css' href='css/style.css' type='text/css' media='all'/>
+<link rel='stylesheet' id='theme-css' href='css/light.css' type='text/css' media='all'/>
+<link rel='stylesheet' id='supersized-css' href='css/supersized.css' type='text/css' media='all'/>
+<script type='text/javascript' src='js/jquery-1.7.1.min.js'></script>
+<script type='text/javascript' src='js/jquery-ui-1.8.16.min.js'></script>
+<script type='text/javascript' src='js/supersized.3.2.5.js'></script>
+<script type='text/javascript' src='js/jquery.waitforimages.js'></script>
+<script type='text/javascript' src='js/jquery.cycle.all.js'></script>
+<script type='text/javascript' src='js/jquery.pajinate.js'></script>
+<script type='text/javascript' src='js/jquery.tweet.js'></script>
+<script type='text/javascript' src='js/jquery.jplayer.min.js'></script>
+<script type='text/javascript' src='js/jplayer.playlist.min.js'></script>
+<script type='text/javascript' src='http://maps.googleapis.com/maps/api/js?sensor=true&#038;ver=3.3.2'></script>
+<script type='text/javascript' src='js/custom.js'></script>
+<style type="text/css">
+#preloader-logo{background: url("images/light/logo-preloader.png")  top center no-repeat;}
+#ajaxloader-logo{background: url("images/light/logo-preloader.png")  top center no-repeat;}
+#mainWrapper a, #footerWrapper a {color: #ce0707; }
+#mainWrapper #pageHeading {border-bottom-color: #ce0707; }
+.tileHighlight, .tile .submenu a:hover, .highlight , ul.jp-controls li a:hover {background-color:#ce0707 !important; }
+</style>
+
+<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="css/ie.css" />
+<![endif]-->
+
+<script type='text/javascript'>
+jQuery(document).ready(function($) {
+			$.supersized({
+	            slide_interval: 5000,
+	            transition: 1,
+	            transition_speed: 700,
+	            performance: 1,
+	            slides 	:  	[			// Slideshow Images
+		{image : 'images/slides/1.jpg'},			
+		{image : 'images/slides/2.jpg'},			
+		{image : 'images/slides/3.jpg'},			
+		{image : 'images/slides/4.jpg'},			
+		{image : 'images/slides/5.jpg'},			
+		{image : 'images/slides/6.jpg'},
+                {image : 'images/slides/7.jpg'}	]
+				});
+});
+</script>
+</head>
+<body id="ajaxSelector">
+<div id="preloader">
+	<div id="preloader-img">
+	</div>
+	<div id="preloader-logo">
+	</div>
+</div>
+<!--start navWrapper-->
+<div id="navWrapper">
+	<div id="header">
+		<div id="logo">
+			<a href="index.html">
+			<img src="images/light/logo.png" alt="Shear Sherrie"/>
+			</a>
+		</div>
+	</div>
+	<!--start tileBlock-->
+	<div id="tileBlock" class="noMusic">
+		<!--start inner-->
+		<div id="innerTiles">
+			<div class="tile">
+				<div class="tileHighlight">
+				</div>
+				<a class="tileImage" href="content/about-me/" title="About Me">
+				<img class="tileColor" src="images/tiles/1.jpg" width="196" height="196" alt="About Me"/>
+				<img class="tileBW" src="images/tiles/1-bw.jpg" width="196" height="196" alt="About Me"/>
+				<span>About Me</span>
+				</a>
+                                <ul class="submenu">
+					<li>
+					<a href="content/about-me/testimonials.html">Testimonials</a>
+					</li>
+					<li>
+					<a href="content/about-me/prices.html">Price List</a>
+					</li>
+                                        <li>
+					<a href="content/about-me/event_participation.html">Other News/Events</a>
+					</li>
+				</ul>
+			</div>
+			<div class="tile">
+				<div class="tileHighlight">
+				</div>
+				<a class="tileImage" href="content/hair/" title="Hair">
+				<img class="tileColor" src="images/tiles/2.jpg" width="196" height="196" alt="Hair"/>
+				<img class="tileBW" src="images/tiles/2-bw.jpg" width="196" height="196" alt="Hair"/>
+				<span>Hair</span>
+				</a>
+			</div>
+			<div class="tile">
+				<div class="tileHighlight">
+				</div>
+				<a class="tileImage" href="content/makeup/" title="Make Up">
+				<img class="tileColor" src="images/tiles/3.jpg" width="196" height="196" alt="Make Up"/>
+				<img class="tileBW" src="images/tiles/3-bw.jpg" width="196" height="196" alt="Make Up"/>
+				<span>Make Up</span>
+				</a>
+			</div>
+			<div class="tile">
+				<div class="tileHighlight">
+				</div>
+				<a class="tileImage" href="content/occasions/" title="Occasions">
+				<img class="tileColor" src="images/tiles/4.jpg" width="196" height="196" alt="Occasions"/>
+				<img class="tileBW" src="images/tiles/4-bw.jpg" width="196" height="196" alt="Occasions"/>
+				<span>Occasions</span>
+				</a>
+				<ul class="submenu">
+					<li>
+					<a href="content/occasions/weddings.html">Weddings</a>
+					</li>
+					<li>
+					<a href="content/occasions/boudoir.html">Boudoir</a>
+					</li>
+				</ul>
+			</div>
+			<div class="tile">
+				<div class="tileHighlight">
+				</div>
+				<a class="tileImage" href="content/appointments/" title="Appointments">
+				<img class="tileColor" src="images/tiles/5.jpg" width="196" height="196" alt="Appointments"/>
+				<img class="tileBW" src="images/tiles/5-bw.jpg" width="196" height="196" alt="Appointments"/>
+				<span>Appointments</span>
+				</a>
+			</div>
+		</div>
+		<!--end innerTiles-->
+	</div>
+</div>
+<!-- end navWrapper -->
+<!--start mainWrapper-->
+<div id="mainWrapper">
+	
+</div>
+<div id="sideWrapper">
+	<div id="featuredImage">
+		<img src="images/slides/7.jpg"/>
+	</div>
+</div>
+<div id="footerWrapper">
+	<div id="footer">
+		<p id="copyright">
+			© Larry Anderson 2014.
+		</p>
+		<!--start social icons-->
+                <div class="iconContainer alignRight">
+			<a href="http://www.pinterest.com/ShearSherrie" target="_blank">
+			<img class="_rolloverSocial" src="images/social/pinterest_h.png" alt="rollover"/></a>
+			<img src="images/social/pinterest.png" alt="icon"/>
+		</div>
+                <div class="iconContainer alignRight">
+			<a href="http://www.instagram.com/Shear_Sherrie" target="_blank">
+			<img class="_rolloverSocial" src="images/social/instagram_h.png" alt="rollover"/></a>
+			<img src="images/social/instagram.png" alt="icon"/>
+		</div>
+		<div class="iconContainer alignRight">
+			<a href="http://www.facebook.com/ShearSherrie" target="_blank">
+			<img class="_rolloverSocial" src="images/social/facebook_h.png" alt="rollover"/></a>
+			<img src="images/social/facebook.png" alt="icon"/>
+		</div>
+		<!--end social icons-->
+	</div>
+</div>
+<a id="pageContentButton" href="javascript:;"></a>
+<a id="menuContentButton" href="javascript:;"></a>
+<div id="largeCaption">
+</div>
+<noscript>
+<style type="text/css">
+	#wrapper {display:none;}
+</style>
+<div id="noscript">
+	<h1>Please enable javascript</h1>
+	<p>
+		It appears that your web browser does not support JavaScript, or you have temporarily disabled scripting. Either way, this site won't work without it. Please consult your web browser's documentation or IT administrator to enable javascript.
+	</p>
+</div>
+</noscript>
+<script type='text/javascript'>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-28107623-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+</body>
+</html>
