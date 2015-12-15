@@ -113,18 +113,18 @@ jQuery.noConflict();
 		
 		var isMobile = 0;
 		
-		$.ajax({
-			type: "POST",
-			url: "php/mobile-detect.php",
-			data: {mobile: 'test'},
-			success: function(msg) {
-    			if(msg == 'mobile') {
-    				isMobile = 1;
-    				$('head').append('<link rel="stylesheet" href="css/mobile.css" type="text/css" />');
-    				 
-    			}
-			}		
-		}); 
+//		$.ajax({
+//			type: "POST",
+//			url: "php/mobile-detect.php",
+//			data: {mobile: 'test'},
+//			success: function(msg) {
+ //   			if(msg == 'mobile') {
+  //  				isMobile = 1;
+   // 				$('head').append('<link rel="stylesheet" href="css/mobile.css" type="text/css" />');
+    //				 
+    //			}
+//			}		
+//		}); 
 		
 		$.ajaxSetup ({  
 					    async:true  
